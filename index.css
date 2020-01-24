@@ -8,20 +8,20 @@ ul.accordion {
   display: none;
 }
 
-.accordion label {
+.accordion input[type="checkbox"] ~ label {
   -webkit-transition: all 500ms 0s;
   transition: all 500ms 0s;
 }
 
-.accordion label:hover {
+.accordion input[type="checkbox"] ~ label:hover {
   background-color: aqua;
 }
 
-.accordion label::after {
+.accordion input[type="checkbox"] ~ label::after {
   content: "→";
 }
 
-.accordion article {
+.accordion input[type="checkbox"] ~ article {
   visibility: hidden;
   height: 0px;
   width: 300px;
