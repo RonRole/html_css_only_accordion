@@ -1,0 +1,48 @@
+ul.accordion {
+    list-style: none;
+    float: left;
+}
+
+
+.accordion {
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    label {
+        transition: all 500ms 0s;
+        &:hover {
+            background-color: aqua;
+        }
+
+        &::after {
+            content: "→";
+        }
+    }
+
+    article {
+        visibility: hidden;
+        height: 0px;
+        width:300px;
+        border:none;
+        transition: height 500ms 0s;
+    }
+
+    input[type="checkbox"]:checked {
+        &~ {
+            label::after {
+                content: "↓"
+            }
+
+            article {
+                visibility: visible;
+                height: 100px;
+                border: medium solid black;
+                transition: height 500ms 0s;
+                overflow: auto;
+            }
+        }
+    }
+
+}

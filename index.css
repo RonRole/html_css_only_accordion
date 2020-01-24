@@ -1,41 +1,45 @@
+@charset "UTF-8";
 ul.accordion {
-    list-style: none;
-    float: left;
+  list-style: none;
+  float: left;
 }
-
 
 .accordion input[type="checkbox"] {
-    display: none;
+  display: none;
 }
 
-.accordion input[type="checkbox"] + label {
-    transition: all 500ms 0s;
+.accordion label {
+  -webkit-transition: all 500ms 0s;
+  transition: all 500ms 0s;
 }
 
-.accordion input[type="checkbox"] + label:hover {
-    background-color: aqua;
+.accordion label:hover {
+  background-color: aqua;
 }
 
-.accordion input[type="checkbox"] + label::after {
-    content: "→";
-}
-
-.accordion input[type="checkbox"]:checked + label::after {
-    content: "↓";
+.accordion label::after {
+  content: "→";
 }
 
 .accordion article {
-    visibility: hidden;
-    height: 0px;
-    width:300px;
-    border:none;
-    transition: height 500ms 0s;
+  visibility: hidden;
+  height: 0px;
+  width: 300px;
+  border: none;
+  -webkit-transition: height 500ms 0s;
+  transition: height 500ms 0s;
+}
+
+.accordion input[type="checkbox"]:checked ~ label::after {
+  content: "↓";
 }
 
 .accordion input[type="checkbox"]:checked ~ article {
-    visibility: visible;
-    height: 100px;
-    border: medium solid black;
-    transition: height 500ms 0s;
-    overflow: auto;
+  visibility: visible;
+  height: 100px;
+  border: medium solid black;
+  -webkit-transition: height 500ms 0s;
+  transition: height 500ms 0s;
+  overflow: auto;
 }
+/*# sourceMappingURL=index.css.map */
