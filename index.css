@@ -1,7 +1,17 @@
 @charset "UTF-8";
+#accordion_area {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(5rem, 20rem))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(5rem, 20rem));
+}
+
 ul.accordion {
   list-style: none;
-  float: left;
 }
 
 .accordion input[type="checkbox"] {
@@ -11,6 +21,8 @@ ul.accordion {
 .accordion input[type="checkbox"] ~ label {
   -webkit-transition: all 500ms 0s;
   transition: all 500ms 0s;
+  background-color: white;
+  border: thin solid gray;
 }
 
 .accordion input[type="checkbox"] ~ label:hover {
@@ -25,6 +37,7 @@ ul.accordion {
   visibility: hidden;
   height: 0px;
   width: 300px;
+  background-color: white;
   border: none;
   -webkit-transition: height 500ms 0s;
   transition: height 500ms 0s;
@@ -41,5 +54,9 @@ ul.accordion {
   -webkit-transition: height 500ms 0s;
   transition: height 500ms 0s;
   overflow: auto;
+}
+
+article#test {
+  padding-top: 6rem;
 }
 /*# sourceMappingURL=index.css.map */

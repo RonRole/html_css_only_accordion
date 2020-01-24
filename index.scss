@@ -1,6 +1,14 @@
+#accordion_area {
+    position: absolute;
+    left:0;
+    right:0;
+    margin:auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(5rem, 20rem));
+}
+
 ul.accordion {
     list-style: none;
-    float: left;
 }
 
 
@@ -12,6 +20,8 @@ ul.accordion {
         &~ {
             label {
                 transition: all 500ms 0s;
+                background-color: white;
+                border: thin solid gray;
                 &:hover {
                     background-color: aqua;
                 }
@@ -25,6 +35,7 @@ ul.accordion {
                 visibility: hidden;
                 height: 0px;
                 width:300px;
+                background-color: white;
                 border:none;
                 transition: height 500ms 0s;
             }
@@ -52,3 +63,8 @@ ul.accordion {
     }
 
 }
+
+article#test {
+    padding-top: 6rem;
+}
+
